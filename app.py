@@ -16,8 +16,6 @@ while True:
     saved = sp.current_user_saved_tracks()
     playlist = sp.user_playlist("spotify", PLAYLIST_ID)
 
-    # Check if the track is already in the playlist
-    # If not, add it to the playlist
     for item in saved["items"]:
         track = item["track"]
         if track["id"] not in [t["track"]["id"] for t in playlist["tracks"]["items"]]:
@@ -25,6 +23,10 @@ while True:
                 f"Adding {track['name']} by {track['artists'][0]['name']} to playlist"
             )
             sp.playlist_add_items(PLAYLIST_ID, [track["id"]])
+        else:
+            print(
+                f"{track['name']} by {track['artists'][0]['name']} already in playlist"
+            )
 
     # Sleep for 1 min
     print("Loop finished, sleeping for 1 min")
