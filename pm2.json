@@ -1,5 +1,5 @@
 {
-	"script": "main.py",
+	"script": "app.py",
 	"watch": true,
 	"ignore_watch": ["logs", "data"],
 	"name": "spotify-add-likes-to-playlist",
