@@ -1,4 +1,4 @@
-import spotipy, dotenv, os, time, json
+import spotipy, dotenv, os, time
 from spotipy.oauth2 import SpotifyOAuth
 
 DELETE_AFTER_ADD = True
