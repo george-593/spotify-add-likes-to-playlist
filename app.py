@@ -34,5 +34,5 @@ while True:
             )
 
     # Sleep for 1 min
-    print("Loop finished, sleeping for 60 seconds")
-    time.sleep(60)
+    print("Loop finished, sleeping for 30 seconds")
+    time.sleep(30)
