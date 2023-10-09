@@ -26,6 +26,7 @@ while True:
             )
             sp.playlist_add_items(PLAYLIST_ID, [track["id"]])
             if DELETE_AFTER_ADD:
+                print(f"Deleting {track['name']} from saved tracks")
                 sp.current_user_saved_tracks_delete([track["id"]])
         else:
             print(
