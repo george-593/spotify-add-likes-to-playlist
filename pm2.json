@@ -1,7 +1,6 @@
 {
 	"script": "app.py",
-	"watch": true,
-	"ignore_watch": ["logs", "data"],
+	"watch": false,
 	"name": "spotify-add-likes-to-playlist",
 	"interpreter": "./.venv/bin/python"
 }
