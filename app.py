@@ -23,6 +23,11 @@ while True:
         saved = sp.current_user_saved_tracks()
         playlist = sp.user_playlist("spotify", PLAYLIST_ID)
 
+        if not saved["items"] or not playlist["tracks"]["items"]:
+            log("Unable to fetch saved tracks or playlist, retrying on next loop")
+            time.sleep(30)
+            continue
+
         # Add any new tracks to the playlists
         for item in saved["items"]:
             track = item["track"]
