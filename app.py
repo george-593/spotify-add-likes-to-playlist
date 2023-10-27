@@ -57,7 +57,7 @@ def main():
 
 try:
     main()
-except spotipy.SpotifyException:
-    log("Spotify error, retrying on next loop")
+except:
+    log("Error detected, retrying on next loop")
     time.sleep(30)
     main()
