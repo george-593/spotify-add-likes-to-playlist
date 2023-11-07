@@ -58,6 +58,6 @@ def main():
 try:
     main()
 except:
-    log("Error detected, retrying on next loop")
-    time.sleep(30)
+    log("Error detected, retrying in one minute")
+    time.sleep(60)
     main()
