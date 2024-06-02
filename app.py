@@ -9,6 +9,16 @@ def log(msg):
 
 DELETE_AFTER_ADD = True
 
+# Clear old environment variables
+for var in [
+    "PLAYLIST_ID",
+    "SPOTIPY_CLIENT_ID",
+    "SPOTIPY_CLIENT_SECRET",
+    "SPOTIPY_REDIRECT_URI",
+]:
+    if var in os.environ:
+        del os.environ[var]
+
 dotenv.load_dotenv()
 
 PLAYLIST_ID = os.getenv("PLAYLIST_ID")
