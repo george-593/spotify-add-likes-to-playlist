@@ -23,9 +23,9 @@ dotenv.load_dotenv()
 
 PLAYLIST_ID = os.getenv("PLAYLIST_ID")
 
-scope = "user-library-read, playlist-modify-public, playlist-modify-private, playlist-read-private, user-library-modify"
+SCOPE = "user-library-read, playlist-modify-public, playlist-modify-private, playlist-read-private, user-library-modify"
 
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=SCOPE))
 
 
 def main():
