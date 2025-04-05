@@ -67,7 +67,7 @@ def main():
 
 try:
     main()
-except:
-    log("Error detected, retrying in one minute")
+except Exception as e:
+    log(f"Error detected: {e.message}, {e.args}")
     time.sleep(60)
     main()
